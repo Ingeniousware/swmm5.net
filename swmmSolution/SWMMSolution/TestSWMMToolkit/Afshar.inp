@@ -1,0 +1,191 @@
+[TITLE]
+; Creado por SWMM 5.0.18 vE (GMMF - UPV)
+
+[OPTIONS]
+FLOW_UNITS           LPS
+INFILTRATION         HORTON
+FLOW_ROUTING         DYNWAVE
+START_DATE           12/03/2015
+START_TIME           00:00:00
+REPORT_START_DATE    12/03/2015
+REPORT_START_TIME    00:00:00
+END_DATE             12/03/2015
+END_TIME             00:30:00
+SWEEP_START          01/01
+SWEEP_END            12/31
+DRY_DAYS             0
+REPORT_STEP          00:00:01
+WET_STEP             00:05:00
+DRY_STEP             00:05:00
+ROUTING_STEP         0:00:01 
+ALLOW_PONDING        NO
+INERTIAL_DAMPING     PARTIAL
+VARIABLE_STEP        0.00
+LENGTHENING_STEP     0
+MIN_SURFAREA         0
+NORMAL_FLOW_LIMITED  BOTH
+SKIP_STEADY_STATE    NO
+FORCE_MAIN_EQUATION  D-W
+LINK_OFFSETS         DEPTH
+MIN_SLOPE            0
+
+[EVAPORATION]
+;;Tipo       Parámetros
+;;---------- ----------
+CONSTANT     0.0
+
+[JUNCTIONS]
+;;               Cota del   Prof.      Nivel      Nivel      Área      
+;;Nombre         Fondo      Máxima     Inicial    Sobrecarga Inundación
+;;-------------- ---------- ---------- ---------- ---------- ----------
+11               150        0          0          0          0         
+22               148.48     0          0          0          0         
+12               146.95     0          0          0          0         
+32               145.41     0          0          0          0         
+42               143.9      0          0          0          0         
+33               146.09     0          0          0          0         
+52               140.67     0          0          0          0         
+43               142.38     0          0          0          0         
+34               145.43     0          0          0          0         
+23               146.95     0          0          0          0         
+61               138.44     0          0          0          0         
+51               140.86     0          0          0          0         
+41               142.38     0          0          0          0         
+31               145.43     0          0          0          0         
+71               136.25     0          0          0          0         
+62               137.81     0          0          0          0         
+53               138.7      0          0          0          0         
+44               140.25     0          0          0          0         
+81               135.06     0          0          0          0         
+91               133.87     0          0          0          0         
+10               132.27     0          0          0          0         
+
+[OUTFALLS]
+;;               Cota del   Tipo de    Nivel/Tabla          
+;;Nombre         Fondo      Vertido    Serie Temporal   Comp
+;;-------------- ---------- ---------- ---------------- ----
+1                132.27     FREE                        NO
+
+[CONDUITS]
+;;               Nudo             Nudo                        Coef. n    Desnivel   Desnivel   Caudal     Caudal    
+;;Nombre         Entrada          Salida           Longitud   Manning    Entrada    Salida     Inicial    Máximo    
+;;-------------- ---------------- ---------------- ---------- ---------- ---------- ---------- ---------- ----------
+1                11               22               106.68     0.013      0          0          0.1132     0         
+2                12               32               121.92     0.013      0          0          0.1132     0         
+3                22               33               121.92     0.013      0          0          0.1982     0         
+4                32               42               131.08     0.013      0          0          0.2265     0         
+5                33               42               106.68     0.013      0          0          00.2548    0         
+6                23               34               147.64     0.013      0          0          0.2265     0         
+7                34               43               137.16     0.013      0          0          0.3398     0         
+8                43               52               106.68     0.013      0          0          0.4530     0         
+9                42               52               167.68     0.013      0          0          0.6229     0         
+10               52               61               152.4      0.013      0          0          1.2459     0         
+11               31               41               152.4      0.013      0          0          0.2548     0         
+12               41               51               106.68     0.013      0          0          0.4530     0         
+13               51               61               106.68     0.013      0          0          0.5663     0         
+14               61               71               172.21     0.013      0          0          2.0104     0         
+15               44               53               121.92     0.013      0          0          0.1132     0         
+16               53               62               91.44      0.013      0          0          0.1699     0         
+17               62               71               105.23     0.013      0          0          0.2548     0         
+18               71               81               121.92     0.013      0          0          2.4635     0         
+19               81               91               152.4      0.013      0          0          2.5201     0         
+20               91               10               186.54     0.013      0          0          2.6617     0         
+21               10               1                1          0.01       0          0          0          0         
+
+[XSECTIONS]
+;;Línea          Forma        Geom1            Geom2      Geom3      Geom4      Vanos     
+;;-------------- ------------ ---------------- ---------- ---------- ---------- ----------
+1                CIRCULAR     0.3048           0          0          0          1                    
+2                CIRCULAR     0.3048           0          0          0          1                    
+3                CIRCULAR     0.381            0          0          0          1                    
+4                CIRCULAR     0.4572           0          0          0          1                    
+5                CIRCULAR     0.381            0          0          0          1                    
+6                CIRCULAR     0.4572           0          0          0          1                    
+7                CIRCULAR     0.4572           0          0          0          1                    
+8                CIRCULAR     0.5334           0          0          0          1                    
+9                CIRCULAR     0.5334           0          0          0          1                    
+10               CIRCULAR     0.762            0          0          0          1                    
+11               CIRCULAR     0.381            0          0          0          1                    
+12               CIRCULAR     0.5334           0          0          0          1                    
+13               CIRCULAR     0.5334           0          0          0          1                    
+14               CIRCULAR     0.9144           0          0          0          1                    
+15               CIRCULAR     0.3048           0          0          0          1                    
+16               CIRCULAR     0.381            0          0          0          1                    
+17               CIRCULAR     0.4572           0          0          0          1                    
+18               CIRCULAR     1.0668           0          0          0          1                    
+19               CIRCULAR     1.0668           0          0          0          1                    
+20               CIRCULAR     1.0668           0          0          0          1                    
+21               CIRCULAR     1.0668           0          0          0          1                    
+
+[LOSSES]
+;;Línea          Entrada    Salida     Media      Compuerta 
+;;-------------- ---------- ---------- ---------- ----------
+
+[DWF]
+;;                                Valor      Patrones  
+;;Nudo           Parámetro        Medio      Temporales
+;;-------------- ---------------- ---------- ----------
+11               FLOW             113.2      "" ""
+22               FLOW             85         "" ""
+12               FLOW             113.2      "" ""
+32               FLOW             113.3      "" ""
+42               FLOW             141.6      "" ""
+33               FLOW             56.6       "" ""
+52               FLOW             170        "" ""
+43               FLOW             113.2      "" ""
+34               FLOW             113.3      "" ""
+23               FLOW             226.5      "" ""
+61               FLOW             198.2      "" ""
+51               FLOW             113.3      "" ""
+41               FLOW             198.2      "" ""
+31               FLOW             254.8      "" ""
+71               FLOW             198.3      "" ""
+62               FLOW             84.9       "" ""
+53               FLOW             56.7       "" ""
+44               FLOW             113.2      "" ""
+81               FLOW             56.6       "" ""
+91               FLOW             141.6      "" ""
+
+[REPORT]
+INPUT      NO
+CONTROLS   NO
+SUBCATCHMENTS ALL
+NODES ALL
+LINKS ALL
+
+[TAGS]
+
+[MAP]
+DIMENSIONS 0.000 0.000 10000.000 10000.000
+Units      Ninguno
+
+[COORDINATES]
+;;Nudo           Coordenada X       Coordenada Y      
+;;-------------- ------------------ ------------------
+11               1135.458           3316.733          
+22               1135.458           4930.279          
+12               1115.538           6543.825          
+32               2788.845           6543.825          
+42               2788.845           5687.251          
+33               2788.845           4930.279          
+52               3804.781           5687.251          
+43               3804.781           4153.386          
+34               3804.781           3296.813          
+23               2788.845           3296.813          
+61               5039.841           5687.251          
+51               5039.841           7041.833          
+41               4342.629           7041.833          
+31               4342.629           8296.813          
+71               6872.510           5687.251          
+62               6872.510           4153.386          
+53               5916.335           4153.386          
+44               5916.335           3316.733          
+81               8027.888           5687.251          
+91               8027.888           6583.665          
+10               9561.753           6583.665          
+1                10442.930          6575.809          
+
+[VERTICES]
+;;Línea          Coordenada X       Coordenada Y      
+;;-------------- ------------------ ------------------
+
