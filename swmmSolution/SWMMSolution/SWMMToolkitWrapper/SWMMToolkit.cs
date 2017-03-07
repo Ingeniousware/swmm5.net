@@ -44,49 +44,49 @@ namespace SWMMToolkitWrapper
         #region new API methods
 
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSimulationUnit(int type, int value);
+        private static extern int swmm_getSimulationUnit(int type, ref int value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSimulationAnalysisSetting(int type, int value);
+        private static extern int swmm_getSimulationAnalysisSetting(int type, ref int value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSimulationParam(int type, double value);
+        private static extern int swmm_getSimulationParam(int type, ref double value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_countObjects(int type, int count);
+        private static extern int swmm_countObjects(int type, ref int count);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getObjectId(int type, int index, string id);
+        private static extern int swmm_getObjectId(int type, int index, ref string id);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getNodeType(int index, int Ntype);
+        private static extern int swmm_getNodeType(int index, ref int Ntype);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getLinkType(int index, int Ltype);
+        private static extern int swmm_getLinkType(int index, ref int Ltype);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getLinkConnections(int index, int Node1, int Node2);
+        private static extern int swmm_getLinkConnections(int index, ref int Node1, ref int Node2);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSubcatchOutConnection(int index, int type, int Index);
+        private static extern int swmm_getSubcatchOutConnection(int index, ref int type, ref int Index);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getNodeParam(int index, int Param, double value);
+        private static extern int swmm_getNodeParam(int index, int Param, ref double value);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setNodeParam(int index, int Param, double value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getLinkParam(int index, int Param, double value);
+        private static extern int swmm_getLinkParam(int index, int Param, ref double value);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setLinkParam(int index, int Param, double value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getLinkDirection(int index, string value);
+        private static extern int swmm_getLinkDirection(int index, ref string value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSubcatchParam(int index, int Param, double value);
+        private static extern int swmm_getSubcatchParam(int index, int Param, ref double value);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setSubcatchParam(int index, int Param, double value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSimulationDateTime(int timetype, string dtimestr);
+        private static extern int swmm_getSimulationDateTime(int timetype, ref string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_setSimulationDateTime(int timetype, string dtimestr);
+        private static extern int swmm_setSimulationDateTime(int timetype, ref string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getCurrentDateTimeStr(string dtimestr);
+        private static extern int swmm_getCurrentDateTimeStr(ref string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getNodeResult(int index, int type, double result);
+        private static extern int swmm_getNodeResult(int index, int type, ref double result);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getLinkResult(int index, int type, double result);
+        private static extern int swmm_getLinkResult(int index, int type, ref double result);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSubcatchResult(int index, int type, double result);
+        private static extern int swmm_getSubcatchResult(int index, int type, ref double result);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setLinkSetting(int index, double setting);
         [DllImport("SWMM5Toolkit.dll")]
@@ -146,53 +146,53 @@ namespace SWMMToolkitWrapper
         #endregion public standard methods
 
         #region new API methods
-        public int GetSimulationUnit(int type, int value)
+        public int GetSimulationUnit(int type, ref int value)
         {
-            return swmm_getSimulationUnit(type, value);
+            return swmm_getSimulationUnit(type, ref value);
         }
 
-        public int GetSimulationAnalysisSetting(int type, int value)
+        public int GetSimulationAnalysisSetting(int type, ref int value)
         {
-            return swmm_getSimulationAnalysisSetting(type, value);
+            return swmm_getSimulationAnalysisSetting(type, ref value);
         }
 
-        public int GetSimulationParam(int type, double value)
+        public int GetSimulationParam(int type, ref double value)
         {
-            return swmm_getSimulationParam(type, value);
+            return swmm_getSimulationParam(type, ref value);
         }
 
-        public int CountObjects(int type, int count)
+        public int CountObjects(int type, ref int count)
         {
-            return swmm_countObjects(type, count);
+            return swmm_countObjects(type, ref count);
         }
 
-        public int GetObjectId(int type, int index, string id)
+        public int GetObjectId(int type, int index, ref string id)
         {
-            return swmm_getObjectId(type, index, id);
+            return swmm_getObjectId(type, index, ref id);
         }
 
-        public int GetNodeType(int index, int Ntype)
+        public int GetNodeType(int index, ref int Ntype)
         {
-            return swmm_getNodeType(index, Ntype);
+            return swmm_getNodeType(index, ref Ntype);
         }
 
-        public int GetLinkType(int index, int Ltype)
+        public int GetLinkType(int index, ref int Ltype)
         {
-            return swmm_getLinkType(index, Ltype);
+            return swmm_getLinkType(index, ref Ltype);
         }
 
-        public int GetLinkConnections(int index, int Node1, int Node2)
+        public int GetLinkConnections(int index, ref int Node1, ref int Node2)
         {
-            return swmm_getLinkConnections(index, Node1, Node2);
+            return swmm_getLinkConnections(index, ref Node1, ref Node2);
         }
 
-        public int GetSubcatchOutConnection(int index, int type, int Index)
+        public int GetSubcatchOutConnection(int index, ref int type, ref int Index)
         {
-            return swmm_getSubcatchOutConnection(index, type, Index);
+            return swmm_getSubcatchOutConnection(index, ref type, ref Index);
         }
-        public int GetNodeParam(int index, int Param, double value)
+        public int GetNodeParam(int index, int Param, ref double value)
         {
-            return swmm_getNodeParam(index, Param, value);
+            return swmm_getNodeParam(index, Param, ref value);
         }
 
         public int SetNodeParam(int index, int Param, double value)
@@ -200,9 +200,9 @@ namespace SWMMToolkitWrapper
             return swmm_setNodeParam(index, Param, value);
         }
 
-        public int GetLinkParam(int index, int Param, double value)
+        public int GetLinkParam(int index, int Param, ref double value)
         {
-            return swmm_getLinkParam(index, Param, value);
+            return swmm_getLinkParam(index, Param, ref value);
         }
 
         public int SetLinkParam(int index, int Param, double value)
@@ -210,14 +210,14 @@ namespace SWMMToolkitWrapper
             return swmm_setLinkParam(index, Param, value);
         }
 
-        public int GetLinkDirection(int index, string value)
+        public int GetLinkDirection(int index, ref string value)
         {
-            return swmm_getLinkDirection(index, value);
+            return swmm_getLinkDirection(index, ref value);
         }
 
-        public int GetSubcatchParam(int index, int Param, double value)
+        public int GetSubcatchParam(int index, int Param, ref double value)
         {
-            return swmm_getSubcatchParam(index, Param, value);
+            return swmm_getSubcatchParam(index, Param, ref value);
         }
 
         public int SetSubcatchParam(int index, int Param, double value)
@@ -225,30 +225,30 @@ namespace SWMMToolkitWrapper
             return swmm_setSubcatchParam(index, Param, value);
         }
 
-        public int GetSimulationDateTime(int timetype, string dtimestr)
+        public int GetSimulationDateTime(int timetype, ref string dtimestr)
         {
-            return swmm_getSimulationDateTime(timetype, dtimestr);
+            return swmm_getSimulationDateTime(timetype, ref dtimestr);
         }
 
-        public int SetSimulationDateTime(int timetype, string dtimestr)
+        public int SetSimulationDateTime(int timetype, ref string dtimestr)
         {
-            return swmm_setSimulationDateTime(timetype, dtimestr);
+            return swmm_setSimulationDateTime(timetype, ref dtimestr);
         }
-        public int GetCurrentDateTimeStr(string dtimestr)
+        public int GetCurrentDateTimeStr(ref string dtimestr)
         {
-            return swmm_getCurrentDateTimeStr(dtimestr);
+            return swmm_getCurrentDateTimeStr(ref dtimestr);
         }
-        public int GetNodeResult(int index, int type, double result)
+        public int GetNodeResult(int index, int type, ref double result)
         {
-            return swmm_getNodeResult(index, type, result);
+            return swmm_getNodeResult(index, type, ref result);
         }
-        public int GetLinkResult(int index, int type, double result)
+        public int GetLinkResult(int index, int type, ref double result)
         {
-            return swmm_getLinkResult(index, type, result);
+            return swmm_getLinkResult(index, type, ref result);
         }
-        public int GetSubcatchResult(int index, int type, double result)
+        public int GetSubcatchResult(int index, int type, ref double result)
         {
-            return swmm_getSubcatchResult(index, type, result);
+            return swmm_getSubcatchResult(index, type, ref result);
         }
         public int SetLinkSetting(int index, double setting)
         {
