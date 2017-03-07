@@ -215,24 +215,48 @@ namespace SWMMToolkitWrapper
             return swmm_getLinkDirection(index, value);
         }
 
-        public int GetNodeType(int index, int Ntype)
+        public int GetSubcatchParam(int index, int Param, double value)
         {
-            return swmm_getNodeType(index, Ntype);
+            return swmm_getSubcatchParam(index, Param, value);
         }
 
-        public int GetLinkType(int index, int Ltype)
+        public int SetSubcatchParam(int index, int Param, double value)
         {
-            return swmm_getLinkType(index, Ltype);
+            return swmm_setSubcatchParam(index, Param, value);
         }
 
-        public int GetLinkConnections(int index, int Node1, int Node2)
+        public int GetSimulationDateTime(int timetype, string dtimestr)
         {
-            return swmm_getLinkConnections(index, Node1, Node2);
+            return swmm_getSimulationDateTime(timetype, dtimestr);
         }
 
-        public int GetSubcatchOutConnection(int index, int type, int Index)
+        public int SetSimulationDateTime(int timetype, string dtimestr)
         {
-            return swmm_getSubcatchOutConnection(index, type, Index);
+            return swmm_setSimulationDateTime(timetype, dtimestr);
+        }
+        public int GetCurrentDateTimeStr(string dtimestr)
+        {
+            return swmm_getCurrentDateTimeStr(dtimestr);
+        }
+        public int GetNodeResult(int index, int type, double result)
+        {
+            return swmm_getNodeResult(index, type, result);
+        }
+        public int GetLinkResult(int index, int type, double result)
+        {
+            return swmm_getLinkResult(index, type, result);
+        }
+        public int GetSubcatchResult(int index, int type, double result)
+        {
+            return swmm_getSubcatchResult(index, type, result);
+        }
+        public int SetLinkSetting(int index, double setting)
+        {
+            return swmm_setLinkSetting(index, setting);
+        }
+        public int SetNodeInflow(int index, double flowrate)
+        {
+            return swmm_setNodeInflow(index, flowrate);
         }
 
         #endregion new API methods
