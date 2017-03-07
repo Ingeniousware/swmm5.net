@@ -12,7 +12,13 @@ namespace TestSWMMToolkit
         {
             var toolkitSWMM = new SWMMToolkit();
 
-            double valueRef = 0;
+            string f1 = "";
+            string f2 = "";
+            string f3 = "";
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+
+            Assert.AreEqual(0, error);
            
         }
     }
