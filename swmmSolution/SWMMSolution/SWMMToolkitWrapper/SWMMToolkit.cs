@@ -22,7 +22,7 @@ namespace SWMMToolkitWrapper
         private static extern int swmm_start(int saveFlag);
 
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_step(double elapsedTime);
+        private static extern int swmm_step(ref double elapsedTime);
 
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_end();
@@ -31,7 +31,7 @@ namespace SWMMToolkitWrapper
         private static extern int swmm_report();
 
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getMassBalErr(float runoffErr, float flowErr, float qualErr);
+        private static extern int swmm_getMassBalErr(ref float runoffErr, ref float flowErr, ref float qualErr);
 
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_close();
@@ -113,9 +113,9 @@ namespace SWMMToolkitWrapper
             return swmm_start(saveFlag);
         }
 
-        public int Step(double elapsedTime)
+        public int Step(ref double elapsedTime)
         {
-            return swmm_step(elapsedTime);
+            return swmm_step(ref elapsedTime);
         }
 
         public int End()
@@ -130,7 +130,7 @@ namespace SWMMToolkitWrapper
 
         public int GetMassBalErr(float runoffErr, float flowErr, float qualErr)
         {
-            return swmm_getMassBalErr(runoffErr, flowErr, qualErr);
+            return swmm_getMassBalErr(ref runoffErr, ref flowErr, ref qualErr);
         }
 
         public int Close()

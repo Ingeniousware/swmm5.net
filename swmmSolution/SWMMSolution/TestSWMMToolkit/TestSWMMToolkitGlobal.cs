@@ -157,12 +157,12 @@ namespace TestSWMMToolkit
         {
 
             int index = 3;
-            int Param = 0;
+            int Param = 1;
             double value = 1;
+
             var toolkitSWMM = new SWMMToolkit();
 
-            int error = toolkitSWMM.Open(f1, f2, f3);
-            error = toolkitSWMM.Start(0);           
+            int error = toolkitSWMM.Open(f1, f2, f3);         
 
             error = toolkitSWMM.SetNodeParam(index, Param, value);         
 
@@ -193,10 +193,14 @@ namespace TestSWMMToolkit
             int index = 1;
             int Param = 3;
             double value = 1;
+            double elapsedTime = 1;
+
             var toolkitSWMM = new SWMMToolkit();
 
             int error = toolkitSWMM.Open(f1, f2, f3);
             error = toolkitSWMM.Start(0);
+            error = toolkitSWMM.Step(ref elapsedTime);
+
             error = toolkitSWMM.SetLinkParam(index, Param, value);
 
             Assert.AreEqual(0, error);
@@ -212,7 +216,7 @@ namespace TestSWMMToolkit
             var toolkitSWMM = new SWMMToolkit();
 
             int error = toolkitSWMM.Open(f1, f2, f3);
-            error = toolkitSWMM.Start(0);
+            //error = toolkitSWMM.Start(0);
             error = toolkitSWMM.GetSubcatchParam(index, Param, ref value);
 
             Assert.AreEqual(0, error);
@@ -257,11 +261,12 @@ namespace TestSWMMToolkit
             int index = 1;
             int type = 1;
             double result = 2;
+            double elapsedTime = 1;
             var toolkitSWMM = new SWMMToolkit();
 
             int error = toolkitSWMM.Open(f1, f2, f3);
-            error = toolkitSWMM.Start(0);
-            error = toolkitSWMM.Run(f1, f2, f3);
+            error = toolkitSWMM.Start(0);          
+            error = toolkitSWMM.Step(ref elapsedTime);
             error = toolkitSWMM.GetSubcatchResult(index, type, ref result);
 
             Assert.AreEqual(0, error);
@@ -276,11 +281,106 @@ namespace TestSWMMToolkit
             var toolkitSWMM = new SWMMToolkit();
 
             int error = toolkitSWMM.Open(f1, f2, f3);
-            error = toolkitSWMM.Start(0);
-            error = toolkitSWMM.Run(f1, f2, f3);
+
             error = toolkitSWMM.SetLinkSetting(index, setting);
 
+            Assert.AreEqual(0, error);
+        }
+
+        [TestMethod]
+        public void TestMethodGetSimulationUnit()
+        {
+
+            int type = 1;
+            int value = 1;
+            var toolkitSWMM = new SWMMToolkit();
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+
+            error = toolkitSWMM.GetSimulationUnit(type, ref value);
+
+            Assert.AreEqual(0, error);
+        }
+
+        [TestMethod]
+        public void TestMethodGetSimulationAnalysisSetting()
+        {
+
+            int type = 1;
+            int value = 1;
+            var toolkitSWMM = new SWMMToolkit();
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+
+            error = toolkitSWMM.GetSimulationAnalysisSetting(type, ref value);
+
+            Assert.AreEqual(0, error);
+        }
+
+        [TestMethod]
+        public void TestMethodGetSimulationParam()
+        {
+
+            int type = 1;
+            double value = 1;
+            var toolkitSWMM = new SWMMToolkit();
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+
+            error = toolkitSWMM.GetSimulationParam(type, ref value);
+
+            Assert.AreEqual(0, error);
+        }
+
+        [TestMethod]
+        public void TestMethodGetSubcatchOutConnection()
+        {
+
+            int type = 1;
+            int index = 1;
+            int Index = 2;
+            var toolkitSWMM = new SWMMToolkit();
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+
+            error = toolkitSWMM.GetSubcatchOutConnection(index, ref type, ref Index);
+
+            Assert.AreEqual(0, error);
+        }
+
+        [TestMethod]
+        public void TestMethodSetSubcatchParam()
+        {
+
+            int index = 1;
+            int Param = 1;
+            double value = 2;
+            var toolkitSWMM = new SWMMToolkit();
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+
+            error = toolkitSWMM.SetSubcatchParam(index, Param, value);
+
         Assert.AreEqual(0, error);
+        }
+
+        [TestMethod]
+        public void TestMethodSetNodeInflow()
+        {
+
+            int index = 1;
+            double flowrate = 2;
+            double elapsedTime = 1;
+            var toolkitSWMM = new SWMMToolkit();
+
+            int error = toolkitSWMM.Open(f1, f2, f3);
+            //error = toolkitSWMM.Start(0);
+            error = toolkitSWMM.Run(f1, f2, f3);
+            //error = toolkitSWMM.Step(ref elapsedTime);
+
+            error = toolkitSWMM.SetNodeInflow(index, flowrate);
+
+            Assert.AreEqual(0, error);
         }
     }
 }
