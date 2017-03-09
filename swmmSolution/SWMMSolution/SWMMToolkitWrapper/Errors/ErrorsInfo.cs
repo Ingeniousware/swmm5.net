@@ -244,6 +244,287 @@ namespace SWMMToolkitWrapper
                 ErrorMesg = "ERROR 157: inconsistent rainfall format for Rain Gage %s"
             });
 
+            ErrorMsg.Add(158, new ErrorCodeMsg()
+            {
+                SWMMIndex = 33,
+                ErrorCode = 158,
+                ErrorMesg = "ERROR 158: time series for Rain Gage %s is also used by another object"
+            });
+
+            ErrorMsg.Add(159, new ErrorCodeMsg()
+            {
+                SWMMIndex = 34,
+                ErrorCode = 159,
+                ErrorMesg = "ERROR 159: recording interval greater than time series interval for Rain Gage %s"
+            });
+
+            ErrorMsg.Add(161, new ErrorCodeMsg()
+            {
+                SWMMIndex = 35,
+                ErrorCode = 161,
+                ErrorMesg = "ERROR 161: cyclic dependency in treatment functions at node %s"
+            });
+
+            ErrorMsg.Add(171, new ErrorCodeMsg()
+            {
+                SWMMIndex = 36,
+                ErrorCode = 171,
+                ErrorMesg = "ERROR 171: Curve %s has invalid or out of sequence data"
+            });
+
+            ErrorMsg.Add(173, new ErrorCodeMsg()
+            {
+                SWMMIndex = 37,
+                ErrorCode = 173,
+                ErrorMesg = "ERROR 173: Time Series %s has its data out of sequence"
+            });
+
+            ErrorMsg.Add(181, new ErrorCodeMsg()
+            {
+                SWMMIndex = 38,
+                ErrorCode = 181,
+                ErrorMesg = "ERROR 181: invalid Snow Melt Climatology parameters"
+            });
+
+            ErrorMsg.Add(182, new ErrorCodeMsg()
+            {
+                SWMMIndex = 39,
+                ErrorCode = 182,
+                ErrorMesg = "ERROR 182: invalid parameters for Snow Pack %s"
+            });
+
+            ErrorMsg.Add(183, new ErrorCodeMsg()
+            {
+                SWMMIndex = 40,
+                ErrorCode = 183,
+                ErrorMesg = "ERROR 183: no type specified for LID %s"
+            });
+
+            ErrorMsg.Add(184, new ErrorCodeMsg()
+            {
+                SWMMIndex = 41,
+                ErrorCode = 184,
+                ErrorMesg = "ERROR 184: missing layer for LID %s"
+            });
+
+            ErrorMsg.Add(185, new ErrorCodeMsg()
+            {
+                SWMMIndex = 42,
+                ErrorCode = 185,
+                ErrorMesg = "ERROR 185: invalid parameter value for LID %s"
+            });
+
+            ErrorMsg.Add(186, new ErrorCodeMsg()
+            {
+                SWMMIndex = 43,
+                ErrorCode = 186,
+                ErrorMesg = "ERROR 186: invalid parameter value for LID placed in Subcatchment %s"
+            });
+
+            ErrorMsg.Add(186, new ErrorCodeMsg()
+            {
+                SWMMIndex = 43,
+                ErrorCode = 186,
+                ErrorMesg = "ERROR 186: invalid parameter value for LID placed in Subcatchment %s"
+            });
+
+            ErrorMsg.Add(187, new ErrorCodeMsg()
+            {
+                SWMMIndex = 44,
+                ErrorCode = 187,
+                ErrorMesg = "ERROR 187: LID area exceeds total area for Subcatchment %s"
+            });
+
+            ErrorMsg.Add(188, new ErrorCodeMsg()
+            {
+                SWMMIndex = 45,
+                ErrorCode = 188,
+                ErrorMesg = "ERROR 188: LID capture area exceeds total impervious area for Subcatchment %s"
+            });
+
+            ErrorMsg.Add(191, new ErrorCodeMsg()
+            {
+                SWMMIndex = 45,
+                ErrorCode = 191,
+                ErrorMesg = "ERROR 191: simulation start date comes after ending date"
+            });
+
+            ErrorMsg.Add(193, new ErrorCodeMsg()
+            {
+                SWMMIndex = 46,
+                ErrorCode = 193,
+                ErrorMesg = "ERROR 193: report start date comes after ending date"
+            });
+
+            ErrorMsg.Add(195, new ErrorCodeMsg()
+            {
+                SWMMIndex = 47,
+                ErrorCode = 195,
+                ErrorMesg = "ERROR 195: reporting time step or duration is less than routing time step"
+            });
+
+            ErrorMsg.Add(200, new ErrorCodeMsg()
+            {
+                SWMMIndex = 48,
+                ErrorCode = 200,
+                ErrorMesg = "ERROR 200: one or more errors in input file"
+            });
+
+            ErrorMsg.Add(201, new ErrorCodeMsg()
+            {
+                SWMMIndex = 49,
+                ErrorCode = 201,
+                ErrorMesg = "ERROR 201: too many characters in input line"
+            });
+
+            ErrorMsg.Add(203, new ErrorCodeMsg()
+            {
+                SWMMIndex = 50,
+                ErrorCode = 203,
+                ErrorMesg = "ERROR 203: too few items"
+            });
+
+            ErrorMsg.Add(205, new ErrorCodeMsg()
+            {
+                SWMMIndex = 51,
+                ErrorCode = 205,
+                ErrorMesg = "ERROR 205: invalid keyword %s"
+            });
+
+            ErrorMsg.Add(207, new ErrorCodeMsg()
+            {
+                SWMMIndex = 52,
+                ErrorCode = 207,
+                ErrorMesg = "ERROR 207: duplicate ID name %s"
+            });
+
+            ErrorMsg.Add(209, new ErrorCodeMsg()
+            {
+                SWMMIndex = 53,
+                ErrorCode = 209,
+                ErrorMesg = "ERROR 209: undefined object %s"
+            });
+
+            ErrorMsg.Add(211, new ErrorCodeMsg()
+            {
+                SWMMIndex = 54,
+                ErrorCode = 211,
+                ErrorMesg = "ERROR 211: invalid number %s"
+            });
+
+            ErrorMsg.Add(213, new ErrorCodeMsg()
+            {
+                SWMMIndex = 55,
+                ErrorCode = 213,
+                ErrorMesg = "ERROR 213: invalid date/time %s"
+            });
+
+            ErrorMsg.Add(217, new ErrorCodeMsg()
+            {
+                SWMMIndex = 56,
+                ErrorCode = 217,
+                ErrorMesg = "ERROR 217: control rule clause invalid or out of sequence"
+            });
+
+            ErrorMsg.Add(219, new ErrorCodeMsg()
+            {
+                SWMMIndex = 57,
+                ErrorCode = 219,
+                ErrorMesg = "ERROR 219: data provided for unidentified transect"
+            });
+
+            ErrorMsg.Add(221, new ErrorCodeMsg()
+            {
+                SWMMIndex = 58,
+                ErrorCode = 221,
+                ErrorMesg = "ERROR 221: transect station out of sequence"
+            });
+
+            ErrorMsg.Add(223, new ErrorCodeMsg()
+            {
+                SWMMIndex = 59,
+                ErrorCode = 223,
+                ErrorMesg = "ERROR 223: Transect %s has too few stations"
+            });
+
+            ErrorMsg.Add(225, new ErrorCodeMsg()
+            {
+                SWMMIndex = 60,
+                ErrorCode = 225,
+                ErrorMesg = "ERROR 225: Transect %s has too many stations"
+            });
+
+            ErrorMsg.Add(227, new ErrorCodeMsg()
+            {
+                SWMMIndex = 61,
+                ErrorCode = 227,
+                ErrorMesg = "ERROR 227: Transect %s has no Manning's N"
+            });
+
+            ErrorMsg.Add(229, new ErrorCodeMsg()
+            {
+                SWMMIndex = 62,
+                ErrorCode = 229,
+                ErrorMesg = "ERROR 229: Transect %s has invalid overbank locations"
+            });
+
+            ErrorMsg.Add(231, new ErrorCodeMsg()
+            {
+                SWMMIndex = 63,
+                ErrorCode = 231,
+                ErrorMesg = "ERROR 231: Transect %s has no depth"
+            });
+
+            ErrorMsg.Add(233, new ErrorCodeMsg()
+            {
+                SWMMIndex = 64,
+                ErrorCode = 233,
+                ErrorMesg = "ERROR 233: invalid treatment function expression"
+            });
+
+            ErrorMsg.Add(301, new ErrorCodeMsg()
+            {
+                SWMMIndex = 65,
+                ErrorCode = 301,
+                ErrorMesg = "ERROR 301: files share same names"
+            });
+
+            ErrorMsg.Add(303, new ErrorCodeMsg()
+            {
+                SWMMIndex = 66,
+                ErrorCode = 303,
+                ErrorMesg = "ERROR 303: cannot open input file"
+            });
+
+            ErrorMsg.Add(305, new ErrorCodeMsg()
+            {
+                SWMMIndex = 67,
+                ErrorCode = 305,
+                ErrorMesg = "ERROR 305: cannot open report file"
+            });
+
+            ErrorMsg.Add(307, new ErrorCodeMsg()
+            {
+                SWMMIndex = 68,
+                ErrorCode = 307,
+                ErrorMesg = "ERROR 307: cannot open binary results file"
+            });
+
+            ErrorMsg.Add(309, new ErrorCodeMsg()
+            {
+                SWMMIndex = 69,
+                ErrorCode = 309,
+                ErrorMesg = "ERROR 309: error writing to binary results file"
+            });
+
+            ErrorMsg.Add(311, new ErrorCodeMsg()
+            {
+                SWMMIndex = 70,
+                ErrorCode = 311,
+                ErrorMesg = "ERROR 311: error reading from binary results file"
+            });
+
+
         }
 
     }
