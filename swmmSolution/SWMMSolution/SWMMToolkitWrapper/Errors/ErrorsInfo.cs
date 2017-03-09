@@ -41,6 +41,13 @@ namespace SWMMToolkitWrapper
                 ErrorMesg = "ERROR 105: cannot open ODE solver"
             });
 
+            ErrorMsg.Add(105, new ErrorCodeMsg()
+            {
+                SWMMIndex = 4,
+                ErrorCode = 107,
+                ErrorMesg = "ERROR 107: cannot compute a valid time step"
+            });
+
 
 
         }
