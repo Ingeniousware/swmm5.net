@@ -41,8 +41,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="enums\BuildUpTypeEnum.cs" />
+    <Compile Include="enums\CompatibilityTypeEnum.cs" />
     <Compile Include="enums\ConcUnitsTypeEnum.cs" />
     <Compile Include="enums\ConversionTypeEnum.cs" />
+    <Compile Include="enums\CurveTypeEnum.cs" />
+    <Compile Include="enums\DividerTypeEnum.cs" />
     <Compile Include="enums\EvapTypeEnum.cs" />
     <Compile Include="enums\FileTypeEnum.cs" />
     <Compile Include="enums\FileUsageTypeEnum.cs" />
@@ -50,26 +53,44 @@
     <Compile Include="enums\FlowUnitsTypeEnum.cs" />
     <Compile Include="enums\ForceMainTypeEnum.cs" />
     <Compile Include="enums\GageDataTypeEnum.cs" />
+    <Compile Include="enums\InertialDampingTypeEnum.cs" />
+    <Compile Include="enums\InflowTypeEnum.cs" />
+    <Compile Include="enums\InputOptionTypeEnum.cs" />
+    <Compile Include="enums\InputSectionTypeEnum.cs" />
+    <Compile Include="enums\KinWaveMethodTypeEnum.cs" />
     <Compile Include="enums\LinkResultType.cs" />
     <Compile Include="enums\LinkTypeEnum.cs" />
     <Compile Include="enums\LoadingTypeEnum.cs" />
     <Compile Include="enums\NodeResultTypeEnum.cs" />
     <Compile Include="enums\NodeTypeEnum.cs" />
+    <Compile Include="enums\NoneAllTypeEnum.cs" />
+    <Compile Include="enums\NormalFlowTypeEnum.cs" />
     <Compile Include="enums\NormalizerTypeEnum.cs" />
+    <Compile Include="enums\NoYesType Enum.cs" />
     <Compile Include="enums\ObjectTypeEnum.cs" />
     <Compile Include="enums\OffSetTypeEnum.cs" />
+    <Compile Include="enums\OrificeTypeEnum.cs" />
+    <Compile Include="enums\OutFallTypeEnum.cs" />
+    <Compile Include="enums\PatternTypeEnum.cs" />
+    <Compile Include="enums\PumpCurveTypeEnum.cs" />
     <Compile Include="enums\RainFallTypeEnum.cs" />
+    <Compile Include="enums\ReactorTypeEnum.cs" />
     <Compile Include="enums\RouteModelTypeEnum.cs" />
     <Compile Include="enums\RunOffFlowTypeEnum.cs" />
     <Compile Include="enums\RunOffRoutingTypeEnum.cs" />
+    <Compile Include="enums\StorageTypeEnum.cs" />
     <Compile Include="enums\SubAreaTypeEnum.cs" />
     <Compile Include="enums\SubCatchResultTypeEnum.cs" />
     <Compile Include="enums\SysFlowTypeEnum.cs" />
     <Compile Include="enums\TempTypeEnum.cs" />
+    <Compile Include="enums\TreatmentTypeEnum.cs" />
     <Compile Include="enums\UnitsTypeEnum.cs" />
     <Compile Include="enums\WashOffTypeEnum.cs" />
+    <Compile Include="enums\WeirTypeEnum.cs" />
     <Compile Include="enums\WindTypeEnum.cs" />
     <Compile Include="enums\XSectionTypeEnum.cs" />
+    <Compile Include="Errors\ErrorCodeMsg.cs" />
+    <Compile Include="Errors\ErrorsInfo.cs" />
     <Compile Include="SWMMToolkit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
