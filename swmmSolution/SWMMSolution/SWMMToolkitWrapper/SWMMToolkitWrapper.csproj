@@ -70,6 +70,8 @@
     <Compile Include="enums\WashOffTypeEnum.cs" />
     <Compile Include="enums\WindTypeEnum.cs" />
     <Compile Include="enums\XSectionTypeEnum.cs" />
+    <Compile Include="Errors\ErrorCodeMsg.cs" />
+    <Compile Include="Errors\ErrorsInfo.cs" />
     <Compile Include="SWMMToolkit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
