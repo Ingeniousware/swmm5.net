@@ -524,6 +524,244 @@ namespace SWMMToolkitWrapper
                 ErrorMesg = "ERROR 311: error reading from binary results file"
             });
 
+            ErrorMsg.Add(313, new ErrorCodeMsg()
+            {
+                SWMMIndex = 71,
+                ErrorCode = 313,
+                ErrorMesg = "ERROR 313: cannot open scratch rainfall interface file"
+            });
+
+            ErrorMsg.Add(315, new ErrorCodeMsg()
+            {
+                SWMMIndex = 72,
+                ErrorCode = 315,
+                ErrorMesg = "ERROR 315: cannot open rainfall interface file"
+            });
+
+            ErrorMsg.Add(317, new ErrorCodeMsg()
+            {
+                SWMMIndex = 73,
+                ErrorCode = 317,
+                ErrorMesg = "ERROR 317: cannot open rainfall data file"
+            });
+
+            ErrorMsg.Add(318, new ErrorCodeMsg()
+            {
+                SWMMIndex = 74,
+                ErrorCode = 318,
+                ErrorMesg = "ERROR 318: the following line is out of sequence in rainfall data file %s"
+            });
+
+            ErrorMsg.Add(319, new ErrorCodeMsg()
+            {
+                SWMMIndex = 75,
+                ErrorCode = 319,
+                ErrorMesg = "ERROR 319: unknown format for rainfall data file %s"
+            });
+
+            ErrorMsg.Add(320, new ErrorCodeMsg()
+            {
+                SWMMIndex = 76,
+                ErrorCode = 320,
+                ErrorMesg = "ERROR 320: invalid format for rainfall interface file"
+            });
+
+            ErrorMsg.Add(321, new ErrorCodeMsg()
+            {
+                SWMMIndex = 77,
+                ErrorCode = 321,
+                ErrorMesg = "ERROR 321: no data in rainfall interface file for gage %s"
+            });
+
+            ErrorMsg.Add(323, new ErrorCodeMsg()
+            {
+                SWMMIndex = 78,
+                ErrorCode = 323,
+                ErrorMesg = "ERROR 323: cannot open runoff interface file %s"
+            });
+
+            ErrorMsg.Add(325, new ErrorCodeMsg()
+            {
+                SWMMIndex = 79,
+                ErrorCode = 325,
+                ErrorMesg = "ERROR 325: incompatible data found in runoff interface file"
+            });
+
+            ErrorMsg.Add(327, new ErrorCodeMsg()
+            {
+                SWMMIndex = 80,
+                ErrorCode = 327,
+                ErrorMesg = "ERROR 327: attempting to read beyond end of runoff interface file"
+            });
+
+            ErrorMsg.Add(329, new ErrorCodeMsg()
+            {
+                SWMMIndex = 81,
+                ErrorCode = 329,
+                ErrorMesg = "ERROR 329: error in reading from runoff interface file"
+            });
+
+            ErrorMsg.Add(330, new ErrorCodeMsg()
+            {
+                SWMMIndex = 82,
+                ErrorCode = 330,
+                ErrorMesg = "ERROR 330: hotstart interface files have same names"
+            });
+
+            ErrorMsg.Add(331, new ErrorCodeMsg()
+            {
+                SWMMIndex = 83,
+                ErrorCode = 331,
+                ErrorMesg = "ERROR 331: cannot open hotstart interface file %s"
+            });
+
+            ErrorMsg.Add(333, new ErrorCodeMsg()
+            {
+                SWMMIndex = 84,
+                ErrorCode = 333,
+                ErrorMesg = "ERROR 333: incompatible data found in hotstart interface file"
+            });
+
+            ErrorMsg.Add(335, new ErrorCodeMsg()
+            {
+                SWMMIndex = 85,
+                ErrorCode = 335,
+                ErrorMesg = "ERROR 335: error in reading from hotstart interface file"
+            });
+
+            ErrorMsg.Add(337, new ErrorCodeMsg()
+            {
+                SWMMIndex = 86,
+                ErrorCode = 337,
+                ErrorMesg = "ERROR 337: cannot open climate file %s"
+            });
+
+            ErrorMsg.Add(338, new ErrorCodeMsg()
+            {
+                SWMMIndex = 87,
+                ErrorCode = 338,
+                ErrorMesg = "ERROR 338: error in reading from climate file %s"
+            });
+
+            ErrorMsg.Add(339, new ErrorCodeMsg()
+            {
+                SWMMIndex = 88,
+                ErrorCode = 339,
+                ErrorMesg = "ERROR 339: attempt to read beyond end of climate file %s"
+            });
+
+            ErrorMsg.Add(341, new ErrorCodeMsg()
+            {
+                SWMMIndex = 89,
+                ErrorCode = 341,
+                ErrorMesg = "ERROR 341: cannot open scratch RDII interface file"
+            });
+
+            ErrorMsg.Add(343, new ErrorCodeMsg()
+            {
+                SWMMIndex = 90,
+                ErrorCode = 343,
+                ErrorMesg = "ERROR 343: cannot open RDII interface file %s"
+            });
+
+            ErrorMsg.Add(345, new ErrorCodeMsg()
+            {
+                SWMMIndex = 91,
+                ErrorCode = 345,
+                ErrorMesg = "ERROR 345: invalid format for RDII interface file"
+            });
+
+            ErrorMsg.Add(351, new ErrorCodeMsg()
+            {
+                SWMMIndex = 92,
+                ErrorCode = 351,
+                ErrorMesg = "ERROR 351: cannot open routing interface file %s"
+            });
+
+            ErrorMsg.Add(353, new ErrorCodeMsg()
+            {
+                SWMMIndex = 93,
+                ErrorCode = 353,
+                ErrorMesg = "ERROR 353: invalid format for routing interface file %s"
+            });
+
+            ErrorMsg.Add(355, new ErrorCodeMsg()
+            {
+                SWMMIndex = 94,
+                ErrorCode = 355,
+                ErrorMesg = "ERROR 355: mis-matched names in routing interface file %s"
+            });
+
+            ErrorMsg.Add(357, new ErrorCodeMsg()
+            {
+                SWMMIndex = 95,
+                ErrorCode = 357,
+                ErrorMesg = "ERROR 357: inflows and outflows interface files have same name"
+            });
+
+            ErrorMsg.Add(361, new ErrorCodeMsg()
+            {
+                SWMMIndex = 96,
+                ErrorCode = 361,
+                ErrorMesg = "ERROR 361: could not open external file used for Time Series %s"
+            });
+
+            ErrorMsg.Add(363, new ErrorCodeMsg()
+            {
+                SWMMIndex = 97,
+                ErrorCode = 363,
+                ErrorMesg = "ERROR 363: invalid data in external file used for Time Series %s"
+            });
+
+            ErrorMsg.Add(401, new ErrorCodeMsg()
+            {
+                SWMMIndex = 98,
+                ErrorCode = 401,
+                ErrorMesg = "ERROR 401: general system error"
+            });
+
+            ErrorMsg.Add(402, new ErrorCodeMsg()
+            {
+                SWMMIndex = 99,
+                ErrorCode = 402,
+                ErrorMesg = "ERROR 402: cannot open new project while current project still open"
+            });
+
+            ErrorMsg.Add(403, new ErrorCodeMsg()
+            {
+                SWMMIndex = 100,
+                ErrorCode = 403,
+                ErrorMesg = "ERROR 403: project not open or last run not ended"
+            });
+
+            ErrorMsg.Add(405, new ErrorCodeMsg()
+            {
+                SWMMIndex = 101,
+                ErrorCode = 405,
+                ErrorMesg = "ERROR 405: amount of output produced will exceed maximum file size / either reduce Ending Date or increase Reporting Time Step"
+            });
+
+
+            ErrorMsg.Add(501, new ErrorCodeMsg()
+            {
+                SWMMIndex = 102,
+                ErrorCode = 501,
+                ErrorMesg = "Error: Object Type Outside Bonds"
+            });
+
+            ErrorMsg.Add(502, new ErrorCodeMsg()
+            {
+                SWMMIndex = 103,
+                ErrorCode = 502,
+                ErrorMesg = "Error: Network Not Initialized (Input file open?)"
+            });
+
+            ErrorMsg.Add(503, new ErrorCodeMsg()
+            {
+                SWMMIndex = 104,
+                ErrorCode = 503,
+                ErrorMesg = "Error: Simulation Not Running"
+            });
 
         }
 
