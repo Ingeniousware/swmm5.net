@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SWMMToolkitWrapper;
+using System.Text;
+using System.Runtime.InteropServices;
 
 namespace TestSWMMToolkit
 {
@@ -89,18 +91,10 @@ namespace TestSWMMToolkit
             int error = toolkitSWMM.Open(f1, f2, f3);
             error = toolkitSWMM.Start(0);
 
-            try
-            {
-                error = toolkitSWMM.GetObjectId(type, index, ref id);
-            }
-            catch (Exception myEx)
-            {
-
-            }
+          
+                error = toolkitSWMM.GetObjectId(index, type, ref id);
 
             Assert.AreEqual(0, error);
-
-
         }
 
 
@@ -434,7 +428,6 @@ namespace TestSWMMToolkit
         public void TestMethodGetCurrentDateTimeStr()
         {
 
-            //int timetype = 1;
             string dtimestr = "";
 
             var toolkitSWMM = new SWMMToolkit();

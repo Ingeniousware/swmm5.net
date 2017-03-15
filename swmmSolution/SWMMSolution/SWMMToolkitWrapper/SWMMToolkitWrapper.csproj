@@ -66,7 +66,7 @@
     <Compile Include="enums\NoneAllTypeEnum.cs" />
     <Compile Include="enums\NormalFlowTypeEnum.cs" />
     <Compile Include="enums\NormalizerTypeEnum.cs" />
-    <Compile Include="enums\NoYesType Enum.cs" />
+    <Compile Include="enums\NoYesTypeEnum.cs" />
     <Compile Include="enums\ObjectTypeEnum.cs" />
     <Compile Include="enums\OffSetTypeEnum.cs" />
     <Compile Include="enums\OrificeTypeEnum.cs" />
