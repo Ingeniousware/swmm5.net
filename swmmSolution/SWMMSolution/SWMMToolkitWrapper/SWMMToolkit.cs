@@ -52,7 +52,7 @@ namespace SWMMToolkitWrapper
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_countObjects(int type, ref int count);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getObjectId(int type, int index, ref string id);
+        private static extern int swmm_getObjectId(int type, int index, [MarshalAs(UnmanagedType.LPStr)] string id);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_getNodeType(int index, ref int Ntype);
         [DllImport("SWMM5Toolkit.dll")]
@@ -70,17 +70,17 @@ namespace SWMMToolkitWrapper
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setLinkParam(int index, int Param, double value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getLinkDirection(int index, ref string value);
+        private static extern int swmm_getLinkDirection(int index, [MarshalAs(UnmanagedType.LPStr)] string value);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_getSubcatchParam(int index, int Param, ref double value);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setSubcatchParam(int index, int Param, double value);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getSimulationDateTime(int timetype, ref string dtimestr);
+        private static extern int swmm_getSimulationDateTime(int timetype, [MarshalAs(UnmanagedType.LPStr)] string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_setSimulationDateTime(int timetype, ref string dtimestr);
+        private static extern int swmm_setSimulationDateTime(int timetype, [MarshalAs(UnmanagedType.LPStr)] string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
-        private static extern int swmm_getCurrentDateTimeStr(ref string dtimestr);
+        private static extern int swmm_getCurrentDateTimeStr([MarshalAs(UnmanagedType.LPStr)] string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_getNodeResult(int index, int type, ref double result);
         [DllImport("SWMM5Toolkit.dll")]
@@ -168,7 +168,7 @@ namespace SWMMToolkitWrapper
 
         public int GetObjectId(int type, int index, ref string id)
         {
-            return swmm_getObjectId(type, index, ref id);
+            return swmm_getObjectId(type, index, id);
         }
 
         public int GetNodeType(int index, ref int Ntype)
@@ -212,7 +212,7 @@ namespace SWMMToolkitWrapper
 
         public int GetLinkDirection(int index, ref string value)
         {
-            return swmm_getLinkDirection(index, ref value);
+            return swmm_getLinkDirection(index, value);
         }
 
         public int GetSubcatchParam(int index, int Param, ref double value)
@@ -227,16 +227,16 @@ namespace SWMMToolkitWrapper
 
         public int GetSimulationDateTime(int timetype, ref string dtimestr)
         {
-            return swmm_getSimulationDateTime(timetype, ref dtimestr);
+            return swmm_getSimulationDateTime(timetype, dtimestr);
         }
 
         public int SetSimulationDateTime(int timetype, ref string dtimestr)
         {
-            return swmm_setSimulationDateTime(timetype, ref dtimestr);
+            return swmm_setSimulationDateTime(timetype, dtimestr);
         }
         public int GetCurrentDateTimeStr(ref string dtimestr)
         {
-            return swmm_getCurrentDateTimeStr(ref dtimestr);
+            return swmm_getCurrentDateTimeStr(dtimestr);
         }
         public int GetNodeResult(int index, int type, ref double result)
         {

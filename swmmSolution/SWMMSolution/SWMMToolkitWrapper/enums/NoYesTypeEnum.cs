@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SWMMToolkitWrapper.enums
 {
-    public enum NoYesType_Enum : byte
+    public enum NoYesTypeEnum : byte
     {
         NO = 0,
         YES

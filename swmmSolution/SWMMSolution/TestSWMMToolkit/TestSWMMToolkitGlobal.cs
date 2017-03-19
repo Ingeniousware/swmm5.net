@@ -1,15 +1,17 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using SWMMToolkitWrapper;
+using System.Text;
+using System.Runtime.InteropServices;
 
 namespace TestSWMMToolkit
 {
     [TestClass]
     public class TestSWMMToolkitGlobal
     {
-        string f1 = "Afshar.inp";
-        string f2 = "Afshar.rpt";
-        string f3 = "Afshar.out";
+        string f1 = "SubcatchEx.inp";
+        string f2 = "SubcatchEx.rpt";
+        string f3 = "SubcatchEx.out";
 
         [TestMethod]
         public void TestMethodOpen()
@@ -89,18 +91,10 @@ namespace TestSWMMToolkit
             int error = toolkitSWMM.Open(f1, f2, f3);
             error = toolkitSWMM.Start(0);
 
-            try
-            {
-                error = toolkitSWMM.GetObjectId(type, index, ref id);
-            }
-            catch (Exception myEx)
-            {
-
-            }
+          
+                error = toolkitSWMM.GetObjectId(index, type, ref id);
 
             Assert.AreEqual(0, error);
-
-
         }
 
 
@@ -193,13 +187,12 @@ namespace TestSWMMToolkit
             int index = 1;
             int Param = 3;
             double value = 1;
-            double elapsedTime = 1;
 
             var toolkitSWMM = new SWMMToolkit();
 
             int error = toolkitSWMM.Open(f1, f2, f3);
             error = toolkitSWMM.Start(0);
-            error = toolkitSWMM.Step(ref elapsedTime);
+
 
             error = toolkitSWMM.SetLinkParam(index, Param, value);
 
@@ -434,7 +427,6 @@ namespace TestSWMMToolkit
         public void TestMethodGetCurrentDateTimeStr()
         {
 
-            //int timetype = 1;
             string dtimestr = "";
 
             var toolkitSWMM = new SWMMToolkit();
