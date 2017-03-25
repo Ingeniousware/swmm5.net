@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SWMMToolkitWrapper.enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -75,8 +76,16 @@ namespace SWMMToolkitWrapper
         private static extern int swmm_getSubcatchParam(int index, int Param, ref double value);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setSubcatchParam(int index, int Param, double value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="timetype"></param>
+        /// <param name="dtimestr"></param>
+        /// <returns></returns>
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_getSimulationDateTime(int timetype, [MarshalAs(UnmanagedType.LPStr)] string dtimestr);
+
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setSimulationDateTime(int timetype, [MarshalAs(UnmanagedType.LPStr)] string dtimestr);
         [DllImport("SWMM5Toolkit.dll")]
@@ -89,6 +98,8 @@ namespace SWMMToolkitWrapper
         private static extern int swmm_getSubcatchResult(int index, int type, ref double result);
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setLinkSetting(int index, double setting);
+
+
         [DllImport("SWMM5Toolkit.dll")]
         private static extern int swmm_setNodeInflow(int index, double flowrate);
 
@@ -103,6 +114,13 @@ namespace SWMMToolkitWrapper
             return swmm_run(f1, f2, f3);
         }
 
+        /// <summary>
+        /// Open the SWMM toolkit with the corresponding files to be used for the simulation
+        /// </summary>
+        /// <param name="f1">.inp input file</param>
+        /// <param name="f2">.rpt report file</param>
+        /// <param name="f3">.out output file</param>
+        /// <returns></returns>
         public int Open(string f1, string f2, string f3)
         {
             return swmm_open(f1, f2, f3);
@@ -113,6 +131,11 @@ namespace SWMMToolkitWrapper
             return swmm_start(saveFlag);
         }
 
+        /// <summary>
+        /// Advances the simulation by one routing time step
+        /// </summary>
+        /// <param name="elapsedTime">Current elapsed time in decimal days</param>
+        /// <returns></returns>
         public int Step(ref double elapsedTime)
         {
             return swmm_step(ref elapsedTime);
@@ -190,24 +213,24 @@ namespace SWMMToolkitWrapper
         {
             return swmm_getSubcatchOutConnection(index, ref type, ref Index);
         }
-        public int GetNodeParam(int index, int Param, ref double value)
+        public int GetNodeParam(int index, EGetAndSetNodeParam Param, ref double value)
         {
-            return swmm_getNodeParam(index, Param, ref value);
+            return swmm_getNodeParam(index, (int)Param, ref value);
         }
 
-        public int SetNodeParam(int index, int Param, double value)
+        public int SetNodeParam(int index, EGetAndSetNodeParam Param, double value)
         {
-            return swmm_setNodeParam(index, Param, value);
+            return swmm_setNodeParam(index, (int)Param, value);
         }
 
-        public int GetLinkParam(int index, int Param, ref double value)
+        public int GetLinkParam(int index, EGetAndSetLinkParam Param, ref double value)
         {
-            return swmm_getLinkParam(index, Param, ref value);
+            return swmm_getLinkParam(index, (int)Param, ref value);
         }
 
-        public int SetLinkParam(int index, int Param, double value)
+        public int SetLinkParam(int index, EGetAndSetLinkParam Param, double value)
         {
-            return swmm_setLinkParam(index, Param, value);
+            return swmm_setLinkParam(index, (int)Param, value);
         }
 
         public int GetLinkDirection(int index, ref string value)
@@ -215,14 +238,14 @@ namespace SWMMToolkitWrapper
             return swmm_getLinkDirection(index, value);
         }
 
-        public int GetSubcatchParam(int index, int Param, ref double value)
+        public int GetSubcatchParam(int index, EGetAndSetSubcatchParam Param, ref double value)
         {
-            return swmm_getSubcatchParam(index, Param, ref value);
+            return swmm_getSubcatchParam(index, (int)Param, ref value);
         }
 
-        public int SetSubcatchParam(int index, int Param, double value)
+        public int SetSubcatchParam(int index, EGetAndSetSubcatchParam Param, double value)
         {
-            return swmm_setSubcatchParam(index, Param, value);
+            return swmm_setSubcatchParam(index, (int)Param, value);
         }
 
         public int GetSimulationDateTime(int timetype, ref string dtimestr)
@@ -238,17 +261,17 @@ namespace SWMMToolkitWrapper
         {
             return swmm_getCurrentDateTimeStr(dtimestr);
         }
-        public int GetNodeResult(int index, int type, ref double result)
+        public int GetNodeResult(int index, EGetNodeResult type, ref double result)
         {
-            return swmm_getNodeResult(index, type, ref result);
+            return swmm_getNodeResult(index, (int)type, ref result);
         }
-        public int GetLinkResult(int index, int type, ref double result)
+        public int GetLinkResult(int index, EGetLinkResult type, ref double result)
         {
-            return swmm_getLinkResult(index, type, ref result);
+            return swmm_getLinkResult(index, (int)type, ref result);
         }
-        public int GetSubcatchResult(int index, int type, ref double result)
+        public int GetSubcatchResult(int index, EGetSubCatchResult type, ref double result)
         {
-            return swmm_getSubcatchResult(index, type, ref result);
+            return swmm_getSubcatchResult(index, (int)type, ref result);
         }
         public int SetLinkSetting(int index, double setting)
         {
